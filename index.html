@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Camino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="emotion-calm">
+  <canvas id="visualizer-canvas" aria-hidden="true"></canvas>
+
+  <main class="album-shell">
+    <section class="album-header" aria-labelledby="album-title">
+      <p class="kicker">Musica | Emocion | Experiencia</p>
+      <h1 id="album-title">EL CAMINO</h1>
+      <p class="subtitle">Experiencia sonora cinematografica</p>
+    </section>
+
+    <section class="track-list" aria-label="Canciones de El Camino">
+      <article class="track-card" data-index="0">
+        <div>
+          <h2>El Camino - Intro</h2>
+          <p>Energia: <span class="energy-value">0</span></p>
+        </div>
+        <button class="play-button" type="button" data-index="0" aria-label="Reproducir El Camino - Intro">
+          <span class="icon icon-play" aria-hidden="true"></span>
+        </button>
+      </article>
+
+      <article class="track-card" data-index="1">
+        <div>
+          <h2>Dentro de la tormenta</h2>
+          <p>Energia: <span class="energy-value">0</span></p>
+        </div>
+        <button class="play-button" type="button" data-index="1" aria-label="Reproducir Dentro de la tormenta">
+          <span class="icon icon-play" aria-hidden="true"></span>
+        </button>
+      </article>
+
+      <article class="track-card" data-index="2">
+        <div>
+          <h2>Todo esta conectado</h2>
+          <p>Energia: <span class="energy-value">0</span></p>
+        </div>
+        <button class="play-button" type="button" data-index="2" aria-label="Reproducir Todo esta conectado">
+          <span class="icon icon-play" aria-hidden="true"></span>
+        </button>
+      </article>
+    </section>
+
+    <section class="studio-panel" aria-label="Generador musical">
+      <div>
+        <h2>Generar musica con IA</h2>
+        <p id="mensaje">Pulsa generar para crear una melodia breve sobre el ambiente actual.</p>
+      </div>
+      <div class="studio-actions">
+        <button type="button" id="generate-button">Generar melodia</button>
+        <button type="button" id="stop-button">Detener</button>
+      </div>
+      <div id="letra" aria-live="polite"></div>
+    </section>
+
+    <section class="studio-panel" aria-label="Generador de video">
+      <div>
+        <h2>Crear video IA</h2>
+        <p id="video-status">Sube un audio y genera un video sincronizado con beats.</p>
+      </div>
+      <label class="file-control">
+        <span>Audio</span>
+        <input id="video-audio-input" type="file" accept="audio/*">
+      </label>
+      <div class="studio-actions">
+        <button type="button" id="video-generate-button">Generar video</button>
+      </div>
+      <a id="video-result" class="video-result" href="#" target="_blank" rel="noreferrer" hidden>Ver video generado</a>
+    </section>
+
+    <p class="signature">El Camino | Experiencia sonora cinematografica</p>
+  </main>
+
+  <audio id="album-audio"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

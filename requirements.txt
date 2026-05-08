@@ -1,0 +1,14 @@
+streamlit==1.28.1
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+moviepy==1.0.3
+numpy==1.24.3
+scipy==1.11.1
+librosa==0.11.0
+diffusers==0.27.2
+transformers==4.38.2
+torch==2.2.1
+accelerate==0.27.2
+openai>=1.0.0
+# Add more dependencies as needed for AI and video processing
